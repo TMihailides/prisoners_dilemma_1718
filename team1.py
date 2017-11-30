@@ -6,10 +6,11 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
+team_name = 'The Phanz'  # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
-    
+
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -40,7 +41,7 @@ def test_move(my_history, their_history, my_score, their_score, result):
     else:
         print("move(" +
             ", ".join(["'"+my_history+"'", "'"+their_history+"'",
-                       str(my_score), str(their_score)])+
+                       str(my_score), str(their_score)]) +
             ") returned " + "'" + real_result + "'" +
             " and should have returned '" + result + "'")
         return False
@@ -54,7 +55,7 @@ if __name__ == '__main__':
               their_score=0,
               result='b'):
          print 'Test passed'
-     # Test 2: Continue betraying if they collude despite being betrayed.
+    # Test 2: Continue betraying if they collude despite being betrayed.
     test_move(my_history='bbb',
               their_history='ccc', 
               # Note the scores are for testing move().
